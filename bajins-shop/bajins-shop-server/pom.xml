@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bajins-shop</artifactId>
+        <groupId>com.bajins.demo</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bajins-shop-server</artifactId>
+
+    <properties>
+        <cglib.version>3.3.0</cglib.version>
+        <guava.version>28.2-jre</guava.version>
+        <druid.version>1.1.21</druid.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.bajins.demo</groupId>
+            <artifactId>bajins-admin-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bajins.demo</groupId>
+            <artifactId>bajins-shop-model</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!--https://blog.csdn.net/danchu/article/details/70238002-->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.ow2.asm</groupId>
+                    <artifactId>asm</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
